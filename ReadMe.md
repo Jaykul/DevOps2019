@@ -3,6 +3,7 @@ theme: "white"
 transition: "slide"
 highlightTheme: "vs"
 slideNumber: true
+defaultTiming: 100
 ---
 
 <!-- .slide: data-background-position="top center" data-background="./images/header.png" data-background-opacity="1" data-background-size="368px" data-background-color="#FFFFFF"  -->

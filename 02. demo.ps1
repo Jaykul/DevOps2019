@@ -1,3 +1,21 @@
+# A basic prompt
+function prompt { "$($MyInvocation.HistoryId)|$pwd> " }
+
+
+# When there are errors in your prompt
+function prompt {
+    Write-Error "Typo";
+    "$($MyInvocation.HistoryId)|$pwd> " }
+
+# When there's an exception in your prompt
+function prompt {
+    Write-Error "Typo"
+    "$($MyInvocation.HistoryId)|$pwd> "
+    throw "grenade" }
+
+# You should know to check ...
+$Error[0..2]
+
 # Let's look at how PowerLine handles it:
 Set-PowerLinePrompt
 
